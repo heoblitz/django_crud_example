@@ -16,3 +16,6 @@ class Todo_list(models.Model):
         manage = False
         db_table = 'todo_list'
         '''
+
+    def todo_save(self):
+        self.save()

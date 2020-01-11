@@ -26,3 +26,5 @@ urlpatterns = [
     # todo_list
     # path(r'', include(todo_list.urls)),
 ]
+
+

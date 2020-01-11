@@ -3,10 +3,15 @@
 {% block main %}
 
 <div class="container">
-<div class="row">
       {% for list in todo_list %}
-        {{ list.title }} <br>
+        <div class="list-group-item"><input type="checkbox" name="{{ list.title }}" value="{{ list.title }}">
+          {{ list.title }}
+        </div> 
       {% endfor %}
+
+      <button type="button" class="btn btn-primary" onclick="location.href='/home/insert'">
+        일정추가
+      </button>
   </div>
 </div>
 
