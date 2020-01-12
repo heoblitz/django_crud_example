@@ -1,0 +1,16 @@
+{% extends 'todo_main/common/header.html' %}
+{% load staticfiles %}
+{% block main %}
+<section id="blog">
+ <div class="container">
+        {{ todo_list }}
+        <h2>
+            {{ todo_list.title }}
+        </h2>
+        <p>
+            {{ todo_list.content}}
+        </p>
+    </div>
+</section>
+
+{% endblock main %}

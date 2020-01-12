@@ -5,7 +5,9 @@
 <div class="container">
       {% for list in todo_list %}
         <div class="list-group-item"><input type="checkbox" name="{{ list.title }}" value="{{ list.title }}">
-          {{ list.title }}
+          <a href="{% url 'todo_main:Todo_main_detail' pk=list.no %}">
+            {{ list.title }}
+          </a>
         </div> 
       {% endfor %}
 
