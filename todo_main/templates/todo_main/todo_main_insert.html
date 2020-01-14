@@ -1,6 +1,14 @@
-<form method="POST" class="post-form">
-    {% csrf_token %}
+{% extends 'todo_main/common/header.html' %}
+{% load static %}
+{% block main %}
 
-    {{ form.as_p }}
-    <button action="submit">전송</button>
-</form>
+<div class="container">
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+    
+        {{ form.as_p }}
+        <button action="submit">전송</button>
+    </form>
+</div>
+
+{% endblock main %}

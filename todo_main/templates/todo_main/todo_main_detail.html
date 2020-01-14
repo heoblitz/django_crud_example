@@ -10,6 +10,9 @@
         <p>
             {{ todo_list.content}}
         </p>
+        <h2>
+            <a href="{% url 'todo_main:Todo_main_update' pk=todo_list.no %}">수정</a>
+        </h2>
     </div>
 </section>
 
