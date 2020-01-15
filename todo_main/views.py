@@ -33,6 +33,11 @@ class Todo_main_update(generic.UpdateView):
         context = self.get_context_data(object=self.object, form=form)
         return self.render_to_response(context)
 
+class Todo_main_delete(generic.DeleteView):
+    model = Todo_list
+    template_name = 'todo_main/todo_main_delete.html'
+    success_url = '/home/'
+
 def check_post(request):
     template_name = 'todo_main/todo_main_success.html'
 
